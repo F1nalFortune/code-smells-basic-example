@@ -1,6 +1,7 @@
 class OwnersController < ApplicationController
   def index
-    @o = Owner.all.sort_by{|onr| onr.first_name }
+    binding.pry
+    @owners = Owner.all.sort_by{|onr| onr.first_name }
   end
 
   def show
@@ -51,11 +52,11 @@ class OwnersController < ApplicationController
         success_message = "owner destroyed" 
         flash[:success] = success_message
         redirect_to owners_path
+      else
+        error_message = "owner not destroyed because something happened with #{params[:id]}"
+        flash[:error] = error_message
+        # redirect_to owners_path
       end
-    else
-      error_message = "owner not destroyed because something happened with #{params[:id]}"
-      flash[:error] = error_message
-      # redirect_to owners_path
     end 
   end
 

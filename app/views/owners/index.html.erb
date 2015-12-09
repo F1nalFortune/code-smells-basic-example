@@ -10,7 +10,6 @@
   </thead>
 
   <tbody>
-    <% if @owners.any? do %>
     <% @owners.each do |owner| %>
       <tr>
         <td>
@@ -21,8 +20,6 @@
     <% end %>
   </tbody>
 </table>
-
 <br>
 
-<% end %>
 <%= link_to 'New Owner', new_owner_path %>
