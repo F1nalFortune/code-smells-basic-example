@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.2.0'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -34,6 +35,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'pry'
   gem 'byebug'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
@@ -43,6 +45,4 @@ group :development, :test do
   gem 'spring'
   gem 'rspec-rails'
 end
-
-gem 'this_is_not_a_real_Gem '
 
